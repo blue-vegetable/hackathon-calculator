@@ -1,1 +1,3 @@
 # hackathon-calculator
+
+这是一个用于hackthon普通组计算器项目的repo

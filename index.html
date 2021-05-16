@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>大整数计算器</title>
+		<link href="css/index.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+		<script type="text/javascript" src="js/cal.js"></script>
+	</head>
+	
+	<script>
+		document.onkeydown = cdk; 
+		function cdk(){ 
+		    if(event.keyCode ==13){
+		        document.getElementById("equ_btn").click();
+		    }
+		}
+	</script>
+	
+
+	<body >
+		<div id="calculator">
+			<div id="head"><h3>网页版简单计算器</h3></div>
+			<div id="show" align="center">
+				<input type="text" name ="process" id="text" >
+			</div>
+			
+			<div align="center">
+				<textarea id="results">  历史记录 </textarea>
+			</div>
+			
+			<div id="cuttom">
+				<table align="center">
+					<tr>
+						<td><input type="button" value="x^2" onclick="display('**2')"></td>
+						<td><input type="button" value="x^(1/2)" onclick="display('**(1/2)')"></td>
+						<td><input type="button" value="mod" onclick="display('mod')"></td>
+						
+					</tr>
+					<tr>
+						<td><input type="button" value="7" onclick="display(7)"></td>
+						<td><input type="button" value="8" onclick="display(8)"></td>
+						<td><input type="button" value="9" onclick="display(9)"></td>
+						<td><input type="button" value="+" onclick="display('+')"></td>
+						<td><input type="button" value="-" onclick="display('-')"></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="4" onclick="display(4)"></td>
+						<td><input type="button" value="5" onclick="display(5)"></td>
+						<td><input type="button" value="6" onclick="display(6)"></td>
+						<td><input type="button" value="*" onclick="display('*')"></td>
+						<td><input type="button" value="/" onclick="display('/')"></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="1" onclick="display(1)"></td>
+						<td><input type="button" value="2" onclick="display(2)"></td>
+						<td><input type="button" value="3" onclick="display(3)"></td>
+						<td><input type="button" value="(" onclick="display('(')"></td>
+						<td><input type="button" value=")" onclick="display(')')"></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="." onclick="display('.')"></td>
+						<td><input type="button" value="0" onclick="display(0)"></td>
+						<td><input type="button" value="←" onclick="back()"></td>
+						<td><input type="button" value="clear" onclick="reset()"></td>
+						<td><input id = "equ_btn" type="button" value="=" onclick="equals()"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
+

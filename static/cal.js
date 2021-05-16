@@ -15,7 +15,8 @@ function equals()	//等于
 	process0 = str.value;
 	process = "process"+"="+str.value.replace('+','$');
 	var request = new XMLHttpRequest();
-	request.open('post','http://47.98.132.72/5000/calculate');
+	request.open('post','http://47.98.132.72:5000/calculate');
+	//request.open('post','http://47.98.132.72:5000/calculate');
 	request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	request.send(process);
 	request.onreadystatechange = function () {
